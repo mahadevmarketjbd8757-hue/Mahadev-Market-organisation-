@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>महादेव मार्केट - जहानाबाद</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#fffaf0;color:#1a1a1a}
+.header{background:#0f2d1f;color:#ffde8a;padding:12px 16px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #d4af37}
+.logo{display:flex;gap:10px;align-items:center}
+.logo-icon{width:48px;height:48px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid #d4af37}
+.logo-text b{font-size:18px;display:block;line-height:1.1}
+.logo-text span{font-size:11px;opacity:.9}
+.menu-btn{background:#ffde8a;color:#0f2d1f;border:none;padding:8px 14px;border-radius:8px;font-weight:800}
+.nav{display:none;position:absolute;top:70px;right:12px;background:#0f2d1f;border:2px solid #d4af37;border-radius:12px;overflow:hidden;min-width:180px}
+.nav a{display:block;color:#ffde8a;text-decoration:none;padding:12px 16px;border-bottom:1px solid #2a5a3f}
+.nav.show{display:block}
+.hero{background:linear-gradient(135deg,#0f2d1f 0%,#1a4d2e 100%);color:#ffde8a;text-align:center;padding:32px 16px}
+.hero h1{font-size:28px;margin-bottom:8px}
+.hero p{font-size:15px;opacity:.95;margin-bottom:16px}
+.hero-btn{background:#ffde8a;color:#0f2d1f;border:none;padding:12px 24px;border-radius:30px;font-weight:900;font-size:16px}
+.section{padding:24px 14px;max-width:700px;margin:auto}
+.section-title{font-size:22px;font-weight:900;color:#0f2d1f;border-left:5px solid #d4af37;padding-left:12px;margin-bottom:16px}
+.card{background:#fff;border:1.5px solid #e6d5a0;border-radius:16px;padding:14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.en{font-weight:900;color:#0f2d1f;font-size:17px}
+.hi{font-size:13px;color:#555;margin-top:2px}
+.charge{font-weight:900;color:#7a1a1a;margin-top:4px;font-size:15px}
+.order-btn{background:#1a8a4a;color:#fff;border:none;padding:10px 16px;border-radius:12px;font-weight:800}
+.about-box{background:#fff;border:1.5px solid #d4af37;border-radius:16px;padding:18px;line-height:1.6}
+.about-box b{color:#0f2d1f}
+.contact-box{background:#0f2d1f;color:#ffde8a;border-radius:16px;padding:18px;line-height:1.8}
+.footer{background:#0a1f15;color:#ffde8a;text-align:center;padding:20px 12px;margin-top:20px;font-size:13px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="logo"><div class="logo-icon">🔱</div><div class="logo-text"><b>महादेव मार्केट</b><span>जहानाबाद • शुद्ध • पूरा • विश्वसनीय</span></div></div>
+<button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('show')">☰ Menu</button>
+<div class="nav" id="nav">
+<a href="#home" onclick="hide()">🏠 Home</a>
+<a href="#products" onclick="hide()">📦 Our Products</a>
+<a href="#list" onclick="hide()">🛒 Product List</a>
+<a href="#about" onclick="hide()">ℹ️ About Us</a>
+<a href="#contact" onclick="hide()">📞 Contact Us</a>
+</div>
+</div>
+
+<div class="hero" id="home">
+<h1>🔱 हर हर महादेव! 🔱</h1>
+<p>जहानाबाद का भरोसेमंद किराना - शुद्ध आटा, बेसन, सत्तू, दाल, मसाला</p>
+<button class="hero-btn" onclick="document.getElementById('list').scrollIntoView({behavior:'smooth'})">अभी ऑर्डर करें</button>
+</div>
+
+<div class="section" id="products">
+<div class="section-title">Our Products - हमारे प्रोडक्ट्स</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="about-box" style="text-align:center"><div style="font-size:32px">🌾</div><b>गेहूं आटा</b><br><span style="font-size:13px">शुद्ध चक्की आटा</span></div>
+<div class="about-box" style="text-align:center"><div style="font-size:32px">🟡</div><b>बेसन</b><br><span style="font-size:13px">चने का बेसन</span></div>
+<div class="about-box" style="text-align:center"><div style="font-size:32px">🤎</div><b>सत्तू</b><br><span style="font-size:13px">देसी सत्तू</span></div>
+<div class="about-box" style="text-align:center"><div style="font-size:32px">🫘</div><b>दाल-मसाला</b><br><span style="font-size:13px">हर तरह की दाल</span></div>
+</div>
+</div>
+
+<div class="section" id="list">
+<div class="section-title">Product List - Naam + Charge</div>
+
+<div class="card"><div><div class="en">Gehu Atta 1KG</div><div class="hi">Naam: गेहूं आटा 1KG</div><div class="charge">Charge: Rs 34</div></div><button class="order-btn" onclick="order('Gehu Atta 1KG - Rs 34')">Order</button></div>
+
+<div class="card"><div><div class="en">Atta 5KG</div><div class="hi">Naam: आटा 5KG</div><div class="charge">Charge: Rs 170</div></div><button class="order-btn" onclick="order('Atta 5KG - Rs 170')">Order</button></div>
+
+<div class="card"><div><div class="en">Besan 1KG</div><div class="hi">Naam: बेसन 1KG</div><div class="charge">Charge: Rs 90</div></div><button class="order-btn" onclick="order('Besan 1KG - Rs 90')">Order</button></div>
+
+<div class="card"><div><div class="en">Sattu 1KG</div><div class="hi">Naam: सत्तू 1KG</div><div class="charge">Charge: Rs 120</div></div><button class="order-btn" onclick="order('Sattu 1KG - Rs 120')">Order</button></div>
+
+<div class="card"><div><div class="en">Dal 1KG</div><div class="hi">Naam: दाल 1KG</div><div class="charge">Charge: Rs 82</div></div><button class="order-btn" onclick="order('Dal 1KG - Rs 82')">Order</button></div>
+
+<div class="card"><div><div class="en">Masala 1KG</div><div class="hi">Naam: मसाला 1KG</div><div class="charge">Charge: Rs 220</div></div><button class="order-btn" onclick="order('Masala 1KG - Rs 220')">Order</button></div>
+
+</div>
+
+<div class="section" id="about">
+<div class="section-title">About Us - हमारे बारे में</div>
+<div class="about-box">
+<b>🔱 महादेव मार्केट - जहानाबाद</b><br><br>
+हम जहानाबाद में 10 साल से शुद्ध और पूरा सामान दे रहे हैं। हमारा मकसद है - हर घर में शुद्ध आटा, बेसन, सत्तू पहुंचाना।<br><br>
+<b>हमारी खासियत:</b><br>
+• 100% शुद्ध - कोई मिलावट नहीं<br>
+• पूरा वजन - 1KG मतलब 1KG<br>
+• Free Home Delivery - जहानाबाद में<br>
+• Nitesh Kumar का भरोसा<br><br>
+<b>हर हर महादेव! 🙏</b>
+</div>
+</div>
+
+<div class="section" id="contact">
+<div class="section-title">Contact Us - संपर्क करें</div>
+<div class="contact-box">
+<b>📍 Address:</b> महादेव मार्केट, जहानाबाद, बिहार - 804408<br>
+<b>👤 Owner:</b> NITESH KUMAR<br>
+<b>📞 Phone/WhatsApp:</b> 8757360888<br>
+<b>💳 UPI Payment:</b> niteshjbd92@okaxis<br>
+<b>⏰ Timing:</b> सुबह 7 बजे से रात 9 बजे तक<br><br>
+<button class="hero-btn" style="width:100%" onclick="window.open('https://wa.me/918757360888','_blank')">WhatsApp पर मैसेज करें</button>
+</div>
+</div>
+
+<div class="footer">
+<b>NITESH KUMAR | 8757360888</b><br>
+महादेव मार्केट जहानाबाद | UPI: niteshjbd92@okaxis<br>
+© 2026 Mahadev Market - Har Har Mahadev! 🔱
+</div>
+
+<script>
+function hide(){document.getElementById('nav').classList.remove('show')}
+function order(i){window.open('https://wa.me/918757360888?text='+encodeURIComponent('🔱 Har Har Mahadev! Order: '+i+'\nNaam:\nAddress:'),'_blank')}
+</script>
+</body>
+</html>
