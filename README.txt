@@ -1,0 +1,1 @@
+Place final product images here later. The current product cards use emoji illustrations directly in script.js.

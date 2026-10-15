@@ -1,121 +1,146 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head> 
-<meta name="google-site-verification" content="dxBcWmVjdy1BODQfL70J0Te8_TlgQ6Q_QutSHRYxgrY" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>महादेव मार्केट - जहानाबाद</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{background:#fffaf0;color:#1a1a1a}
-.header{background:#0f2d1f;color:#ffde8a;padding:12px 16px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #d4af37}
-.logo{display:flex;gap:10px;align-items:center}
-.logo-icon{width:48px;height:48px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid #d4af37}
-.logo-text b{font-size:18px;display:block;line-height:1.1}
-.logo-text span{font-size:11px;opacity:.9}
-.menu-btn{background:#ffde8a;color:#0f2d1f;border:none;padding:8px 14px;border-radius:8px;font-weight:800}
-.nav{display:none;position:absolute;top:70px;right:12px;background:#0f2d1f;border:2px solid #d4af37;border-radius:12px;overflow:hidden;min-width:180px}
-.nav a{display:block;color:#ffde8a;text-decoration:none;padding:12px 16px;border-bottom:1px solid #2a5a3f}
-.nav.show{display:block}
-.hero{background:linear-gradient(135deg,#0f2d1f 0%,#1a4d2e 100%);color:#ffde8a;text-align:center;padding:32px 16px}
-.hero h1{font-size:28px;margin-bottom:8px}
-.hero p{font-size:15px;opacity:.95;margin-bottom:16px}
-.hero-btn{background:#ffde8a;color:#0f2d1f;border:none;padding:12px 24px;border-radius:30px;font-weight:900;font-size:16px}
-.section{padding:24px 14px;max-width:700px;margin:auto}
-.section-title{font-size:22px;font-weight:900;color:#0f2d1f;border-left:5px solid #d4af37;padding-left:12px;margin-bottom:16px}
-.card{background:#fff;border:1.5px solid #e6d5a0;border-radius:16px;padding:14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.en{font-weight:900;color:#0f2d1f;font-size:17px}
-.hi{font-size:13px;color:#555;margin-top:2px}
-.charge{font-weight:900;color:#7a1a1a;margin-top:4px;font-size:15px}
-.order-btn{background:#1a8a4a;color:#fff;border:none;padding:10px 16px;border-radius:12px;font-weight:800}
-.about-box{background:#fff;border:1.5px solid #d4af37;border-radius:16px;padding:18px;line-height:1.6}
-.about-box b{color:#0f2d1f}
-.contact-box{background:#0f2d1f;color:#ffde8a;border-radius:16px;padding:18px;line-height:1.8}
-.footer{background:#0a1f15;color:#ffde8a;text-align:center;padding:20px 12px;margin-top:20px;font-size:13px}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14532d">
+  <title>Mahadev Market Organization</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand-mark">MM</div>
+    <div class="brand-copy">
+      <h1>Mahadev Market</h1>
+      <p>ORGANIZATION · Market • Merit • Mastery</p>
+    </div>
+    <button id="notificationBell" class="icon-btn" aria-label="Notifications">
+      🔔 <span id="notificationBadge" class="badge hidden">0</span>
+    </button>
+  </header>
 
-<div class="header">
-<div class="logo"><div class="logo-icon">🔱</div><div class="logo-text"><b>महादेव मार्केट</b><span>जहानाबाद • शुद्ध • पूरा • विश्वसनीय</span></div></div>
-<button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('show')">☰ Menu</button>
-<div class="nav" id="nav">
-<a href="#home" onclick="hide()">🏠 Home</a>
-<a href="#products" onclick="hide()">📦 Our Products</a>
-<a href="#list" onclick="hide()">🛒 Product List</a>
-<a href="#about" onclick="hide()">ℹ️ About Us</a>
-<a href="#contact" onclick="hide()">📞 Contact Us</a>
-</div>
-</div>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">WELCOME TO MAHADEV MARKET</p>
+      <h2>आपकी रोज़मर्रा की ज़रूरतें,<br><span>एक ही जगह।</span></h2>
+      <p>किराना, दालें और मसाले — आसानी से चुनें और ऑर्डर करें।</p>
+      <div class="hero-actions">
+        <button class="primary-btn" id="shopNow">सामान देखें</button>
+        <button class="secondary-btn" id="trackOpen">ऑर्डर ट्रैक करें</button>
+      </div>
+    </section>
 
-<div class="hero" id="home">
-<h1>🔱 हर हर महादेव! 🔱</h1>
-<p>जहानाबाद का भरोसेमंद किराना - शुद्ध आटा, बेसन, सत्तू, दाल, मसाला</p>
-<button class="hero-btn" onclick="document.getElementById('list').scrollIntoView({behavior:'smooth'})">अभी ऑर्डर करें</button>
-</div>
+    <section class="quick-stats">
+      <div><strong>2–3 दिन</strong><span>अनुमानित डिलीवरी</span></div>
+      <div><strong>1–2 km</strong><span>स्थानीय डिलीवरी क्षेत्र</span></div>
+      <div><strong>₹0</strong><span>स्थानीय डिलीवरी शुल्क*</span></div>
+    </section>
+    <p class="small-note">*दक्षिणी, जहानाबाद के आसपास उपलब्धता की पुष्टि ऑर्डर के समय करें।</p>
 
-<div class="section" id="products">
-<div class="section-title">Our Products - हमारे प्रोडक्ट्स</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<div class="about-box" style="text-align:center"><div style="font-size:32px">🌾</div><b>गेहूं आटा</b><br><span style="font-size:13px">शुद्ध चक्की आटा</span></div>
-<div class="about-box" style="text-align:center"><div style="font-size:32px">🟡</div><b>बेसन</b><br><span style="font-size:13px">चने का बेसन</span></div>
-<div class="about-box" style="text-align:center"><div style="font-size:32px">🤎</div><b>सत्तू</b><br><span style="font-size:13px">देसी सत्तू</span></div>
-<div class="about-box" style="text-align:center"><div style="font-size:32px">🫘</div><b>दाल-मसाला</b><br><span style="font-size:13px">हर तरह की दाल</span></div>
-</div>
-</div>
+    <section id="productsSection" class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">OUR PRODUCTS</p><h2>प्रोडक्ट गैलरी</h2></div>
+        <button class="cart-pill" id="cartOpen">🛒 कार्ट <span id="cartCount">0</span></button>
+      </div>
+      <input id="searchInput" class="search" type="search" placeholder="प्रोडक्ट खोजें — जैसे चावल, आटा..." aria-label="प्रोडक्ट खोजें">
+      <div id="categoryFilters" class="filters"></div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
 
-<div class="section" id="list">
-<div class="section-title">Product List - Naam + Charge</div>
+    <section class="section split-section">
+      <div>
+        <p class="eyebrow">ORDER UPDATES</p>
+        <h2>आपके ऑर्डर की जानकारी</h2>
+        <p class="muted">ऑर्डर देने के बाद उसका स्टेटस यहाँ Order ID और मोबाइल नंबर से देख सकते हैं।</p>
+      </div>
+      <button id="trackOpen2" class="outline-btn">ऑर्डर ट्रैक करें →</button>
+    </section>
 
-<div class="card"><div><div class="en">Gehu Atta 1KG</div><div class="hi">Naam: गेहूं आटा 1KG</div><div class="charge">Charge: Rs 34</div></div><button class="order-btn" onclick="order('Gehu Atta 1KG - Rs 34')">Order</button></div>
+    <section class="section contact-card">
+      <div><p class="eyebrow">CONTACT</p><h2>Mahadev Market Organization</h2>
+      <p>Ghosi Road, Dakshini, Jehanabad, Bihar</p>
+      <p>Call / WhatsApp: <strong>8757 360 888</strong></p></div>
+      <div class="contact-symbol">🏪</div>
+    </section>
+  </main>
 
-<div class="card"><div><div class="en">Atta 5KG</div><div class="hi">Naam: आटा 5KG</div><div class="charge">Charge: Rs 170</div></div><button class="order-btn" onclick="order('Atta 5KG - Rs 170')">Order</button></div>
+  <footer><strong>Mahadev Market Organization</strong><br><span>Owned by Savitri Kumari · Directed by Nitesh Kumar</span></footer>
 
-<div class="card"><div><div class="en">Besan 1KG</div><div class="hi">Naam: बेसन 1KG</div><div class="charge">Charge: Rs 90</div></div><button class="order-btn" onclick="order('Besan 1KG - Rs 90')">Order</button></div>
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-target="home">🏠<span>होम</span></button>
+    <button class="nav-item" data-target="productsSection">🛍️<span>प्रोडक्ट</span></button>
+    <button class="nav-item" id="bottomCart">🛒<span>कार्ट</span></button>
+    <button class="nav-item" id="bottomNotifications">🔔<span>सूचनाएँ</span></button>
+  </nav>
 
-<div class="card"><div><div class="en">Sattu 1KG</div><div class="hi">Naam: सत्तू 1KG</div><div class="charge">Charge: Rs 120</div></div><button class="order-btn" onclick="order('Sattu 1KG - Rs 120')">Order</button></div>
+  <!-- Notifications drawer -->
+  <div id="notificationPanel" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="notificationTitle">
+    <div class="drawer">
+      <div class="modal-head"><div><p class="eyebrow">IN-APP UPDATES</p><h2 id="notificationTitle">ऐप की सूचनाएँ</h2></div><button class="close-btn" data-close="notificationPanel">✕</button></div>
+      <p class="muted">ये सूचनाएँ ऐप के अंदर दिखाई देंगी। मोबाइल स्क्रीन पर पुश नोटिफिकेशन बाद में अलग से जोड़ा जा सकता है।</p>
+      <div id="notificationList" class="notification-list"></div>
+      <div class="row-actions"><button id="markRead" class="secondary-btn">सभी पढ़ी हुई मानें</button><button id="clearNotifications" class="text-btn">सूचनाएँ हटाएँ</button></div>
+    </div>
+  </div>
 
-<div class="card"><div><div class="en">Dal 1KG</div><div class="hi">Naam: दाल 1KG</div><div class="charge">Charge: Rs 82</div></div><button class="order-btn" onclick="order('Dal 1KG - Rs 82')">Order</button></div>
+  <!-- Cart drawer -->
+  <div id="cartPanel" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="drawer">
+      <div class="modal-head"><div><p class="eyebrow">YOUR BASKET</p><h2 id="cartTitle">आपका कार्ट</h2></div><button class="close-btn" data-close="cartPanel">✕</button></div>
+      <div id="cartItems"></div>
+      <div class="cart-total"><span>कुल राशि</span><strong id="cartTotal">₹0</strong></div>
+      <button id="checkoutOpen" class="primary-btn full-btn">ऑर्डर आगे बढ़ाएँ</button>
+    </div>
+  </div>
 
-<div class="card"><div><div class="en">Masala 1KG</div><div class="hi">Naam: मसाला 1KG</div><div class="charge">Charge: Rs 220</div></div><button class="order-btn" onclick="order('Masala 1KG - Rs 220')">Order</button></div>
+  <!-- Checkout modal -->
+  <div id="checkoutPanel" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal">
+      <div class="modal-head"><div><p class="eyebrow">PLACE ORDER</p><h2 id="checkoutTitle">ऑर्डर की जानकारी</h2></div><button class="close-btn" data-close="checkoutPanel">✕</button></div>
+      <form id="checkoutForm">
+        <label>ग्राहक का नाम<input id="customerName" required maxlength="70" placeholder="अपना नाम लिखें"></label>
+        <label>मोबाइल नंबर<input id="customerPhone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर"></label>
+        <label>डिलीवरी का पता<textarea id="customerAddress" required rows="3" placeholder="मोहल्ला, सड़क और पहचान"></textarea></label>
+        <p class="muted small">डेमो: अभी ऑर्डर इसी ब्राउज़र/डिवाइस में सेव होता है। सभी ग्राहकों और एडमिन के बीच ऑनलाइन साझा करने के लिए बाद में Firebase/बैकएंड जोड़ना होगा।</p>
+        <button class="primary-btn full-btn" type="submit">ऑर्डर दें</button>
+      </form>
+    </div>
+  </div>
 
-</div>
+  <!-- Track order modal -->
+  <div id="trackPanel" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="trackTitle">
+    <div class="modal">
+      <div class="modal-head"><div><p class="eyebrow">ORDER STATUS</p><h2 id="trackTitle">ऑर्डर ट्रैक करें</h2></div><button class="close-btn" data-close="trackPanel">✕</button></div>
+      <form id="trackForm">
+        <label>Order ID<input id="trackOrderId" required placeholder="उदाहरण: MM-123456"></label>
+        <label>ऑर्डर वाला मोबाइल नंबर<input id="trackPhone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर"></label>
+        <button class="primary-btn full-btn" type="submit">स्टेटस देखें</button>
+      </form>
+      <div id="trackResult"></div>
+    </div>
+  </div>
 
-<div class="section" id="about">
-<div class="section-title">About Us - हमारे बारे में</div>
-<div class="about-box">
-<b>🔱 महादेव मार्केट - जहानाबाद</b><br><br>
-हम जहानाबाद में 10 साल से शुद्ध और पूरा सामान दे रहे हैं। हमारा मकसद है - हर घर में शुद्ध आटा, बेसन, सत्तू पहुंचाना।<br><br>
-<b>हमारी खासियत:</b><br>
-• 100% शुद्ध - कोई मिलावट नहीं<br>
-• पूरा वजन - 1KG मतलब 1KG<br>
-• Free Home Delivery - जहानाबाद में<br>
-• Nitesh Kumar का भरोसा<br><br>
-<b>हर हर महादेव! 🙏</b>
-</div>
-</div>
+  <!-- Admin demo modal -->
+  <div id="adminPanel" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="drawer">
+      <div class="modal-head"><div><p class="eyebrow">DEMO ADMIN</p><h2 id="adminTitle">एडमिन पैनल</h2></div><button class="close-btn" data-close="adminPanel">✕</button></div>
+      <p class="warning">यह केवल फ्रंटएंड डेमो है, सुरक्षित एडमिन सिस्टम नहीं। वास्तविक एडमिन सुरक्षा सर्वर/Firebase पर बनानी होगी।</p>
+      <form id="adminLoginForm" class="admin-login">
+        <label>अधिकृत मोबाइल नंबर<input id="adminPhone" inputmode="numeric" maxlength="10" placeholder="मोबाइल नंबर"></label>
+        <label>डेमो PIN<input id="adminPin" type="password" inputmode="numeric" placeholder="डेमो PIN"></label>
+        <button class="primary-btn full-btn" type="submit">डेमो लॉगिन</button>
+        <p class="small muted">डेमो PIN: 2468 · इसे वास्तविक ऐप में इस्तेमाल न करें।</p>
+      </form>
+      <div id="adminContent" class="hidden">
+        <h3>ऑर्डर मैनेजमेंट</h3><div id="adminOrders"></div>
+        <h3>प्रोडक्ट कीमत / स्टॉक</h3><div id="adminProducts"></div>
+        <button id="adminLogout" class="secondary-btn">लॉगआउट</button>
+      </div>
+    </div>
+  </div>
 
-<div class="section" id="contact">
-<div class="section-title">Contact Us - संपर्क करें</div>
-<div class="contact-box">
-<b>📍 Address:</b> महादेव मार्केट, जहानाबाद, बिहार - 804408<br>
-<b>👤 Owner:</b> NITESH KUMAR<br>
-<b>📞 Phone/WhatsApp:</b> 8757360888<br>
-<b>💳 UPI Payment:</b> niteshjbd92@okaxis<br>
-<b>⏰ Timing:</b> सुबह 7 बजे से रात 9 बजे तक<br><br>
-<button class="hero-btn" style="width:100%" onclick="window.open('https://wa.me/918757360888','_blank')">WhatsApp पर मैसेज करें</button>
-</div>
-</div>
-
-<div class="footer">
-<b>NITESH KUMAR | 8757360888</b><br>
-महादेव मार्केट जहानाबाद | UPI: niteshjbd92@okaxis<br>
-© 2026 Mahadev Market - Har Har Mahadev! 🔱
-</div>
-
-<script>
-function hide(){document.getElementById('nav').classList.remove('show')}
-function order(i){window.open('https://wa.me/918757360888?text='+encodeURIComponent('🔱 Har Har Mahadev! Order: '+i+'\nNaam:\nAddress:'),'_blank')}
-</script>
+  <button class="admin-shortcut" id="adminOpen" title="डेमो एडमिन">⚙️</button>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="script.js"></script>
 </body>
 </html>
